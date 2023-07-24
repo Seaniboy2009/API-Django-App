@@ -5,7 +5,3 @@ from rest_framework import generics
 # Function view
 def profiles(request):
     return HttpResponse("Hello World")
-
-
-class ProfilesList(generics.ListAPIView):
-    
