@@ -8,12 +8,13 @@ class Profile(models.Model):
 
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=225, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-    ordering = ['-created_at']
+        ordering = ['-created_on']
     
     def __str__(self):
-        return f"{self.owner}'s profile"
+        return f"{self.owner}'s Profile"
 
 def create_profile(sender, instance, created, **kwargs):
     if created:

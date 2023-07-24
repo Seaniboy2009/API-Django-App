@@ -43,7 +43,8 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DATETIME_FORMAT': '%d %b %Y',
 }
 
 if 'DEV' not in os.environ:
@@ -61,15 +62,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'django_filters',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'django.contrib.sites',
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
     'dj_rest_auth.registration',
     'corsheaders',
+
+    'profiles',
 ]
 
 SITE_ID = 1

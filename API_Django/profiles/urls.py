@@ -3,5 +3,7 @@ from . import views
 
 # Function URLS
 urlpatterns = [
-    path('profiles/', views.profiles, name='profiles')
+    # Function URL
+    # path('profiles/', views.profiles, name='profiles'),
+    path('profiles/', views.ProfilesList.as_view()),
 ]
