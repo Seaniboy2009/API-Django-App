@@ -9,6 +9,7 @@ class Entry(models.Model):
     name = models.CharField(max_length=225, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=255, default='Other')
+    completed = models.BooleanField(default=False)
     image = models.ImageField(
         # upload_to='images/',
         # default='../media/images/default_post_keitpn',

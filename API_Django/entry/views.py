@@ -1,3 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from rest_framework import generics
+from .models import Entry
+from .serializers import EntrySerializer
 
-# Create your views here.
+class EntrysList(generics.ListAPIView):
+
+    # This gets the serialiser information to display 
+    serializer_class = ProfileSerializer
+
+    queryset = Entry.objects.all()
+
