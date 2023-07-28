@@ -4,7 +4,7 @@ from rest_framework import generics
 from .models import Entry
 from .serializers import EntrySerializer
 
-class EntrysList(generics.ListAPIView):
+class EntriesList(generics.ListAPIView):
 
     # This gets the serialiser information to display 
     serializer_class = EntrySerializer

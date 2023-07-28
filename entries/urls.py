@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     # Function URL
     # path('profiles/', views.profiles, name='profiles'),
-    path('entrys/', views.EntrysList.as_view()),
+    path('entries/', views.EntriesList.as_view()),
 ]
