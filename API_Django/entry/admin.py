@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Entry
 
-# Register your models here.
+# This allows you to view the profiles under the admin tab
+admin.site.register(Entry)

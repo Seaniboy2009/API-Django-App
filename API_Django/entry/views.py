@@ -7,7 +7,7 @@ from .serializers import EntrySerializer
 class EntrysList(generics.ListAPIView):
 
     # This gets the serialiser information to display 
-    serializer_class = ProfileSerializer
+    serializer_class = EntrySerializer
 
     queryset = Entry.objects.all()
 
